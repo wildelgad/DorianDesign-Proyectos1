@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> FORMULARIOS 1 </title>
+    </head>
+    
+
+    <!-- Se le va dar estilo de bloque con display: block -->
+    <style>
+        input, label{
+            display: block;       
+        }
+    </style>
+
+
+    <!--
+    form - encierra todos los campos del formulario
+    label - representa el nombre del campo
+    input type=
+    text (default) - Entrada de texto
+    password - campo para contraseñas (no encripta, sólo oculta)
+    number - permite introducir únicamente valores numéricos
+    submit - botón para enviar el formulario
+    button - igual que submit
+    image - enviar el formulario usando una imagen personalizada
+    button - este tipo fue sustituido en HTML5 por la etiqueta button que teneís a continuación
+    <button></button> - igual que submit
+    reset - reinicia el formulario vaciando los campos
+    -->
+
+    <body>
+        
+        <form action="#">
+            <!-- Forma 1 para relacionar: Label y input type="text" -->
+            <label>Nombre (forma1) 
+                <input type="text">
+            </label>
+
+            <!-- Forma 2 para relacionar: Label y input type="text" -->
+            <label for="name">Nombre (forma2) </label>
+            <input type="text" id=name>
+
+            <!-- INPUT type Number -->
+            <label for="age"> Edad </label>
+            <input type="number" placeholder="Sólo Números">
+
+            <!-- INPUT type Password, que oculta la contraseña -->
+            <label for="pass"> Password </label>
+            <input type="password">
+
+            <!-- INPUT type Submit, que es el botón para enviar Formulario -->
+            <!-- Forma 1 -->
+            <input type="submit" value=" Botón de Enviar formulario">
+            <!-- Forma 2: con una imagen personalizada-->
+            <input type="image" src="img/Upload.png">
+
+            <!-- BUTTON: otra forma para Input Type="submit" -->
+            <button> Botón de Enviar Formulario (opcion Button) </button>
+
+            <!-- Input Reset:  Resetea el formulario, borra todos los campos -->
+            <input type="reset" value="Resetear Formlulario">
+
+            <p> ----------------- </p>
+            <p> ----------------- </p>
+
+            <!-- Input type Radio:  -->
+            <legend>Seleccione Sexo</legend>
+            <label for="man">Hombre</label>
+            <input type="radio" id="man" name="sex">
+            <label for="woman">Mujer</label>
+            <input type="radio" id="woman" name="sex">
+
+            <p> ----------------- </p>
+
+            <legend> Escoja su Sexo </legend>
+            <label for="man"> Hombre
+                <input type="radio" name="sex">
+            </label>
+            <label for="women"> Mujer
+                <input type="radio" name="sex">
+            </label>
+
+            <p> ----------------- </p>
+
+            <!-- Input type Checkbox -->
+            <legend> Cursos que quiere hacer </legend>
+            <label for="html">HTML</label>            
+            <input type="checkbox" id="html">
+
+            <label for="css">CSS</label>
+            <input type="checkbox" id="css">
+
+            <label for="js">JS</label>
+            <input type="checkbox" id="js">
+
+            <p> ----------------- </p>
+
+            <!-- Input type date: para seleccionar una fecha -->
+            <label for="fecha">Selecciono fecha calendario</label>
+            <input type="date" id="fecha">
+            <input type="month">
+            <input type="time">
+            <input type="week">
+
+            <p> ----------------- </p>
+
+            <!-- Input type color: permite seleccionar un color de entre una paleta de colores -->
+            <label for="colorea">Selecciona un color:</label>
+            <input type="color" id="colorea">
+
+            <p> ----------------- </p>
+
+            <!-- Input type email: para introducir email, pero que HTML5 haga la validación pertinente -->
+            <label for="correo">Introduce tu email</label>
+            <input type="email" id="correo" placeholder="recuerda la @">
+
+            <p> ----------------- </p>
+
+            <!-- Input type File: sirve para subir archivos al servidor -->
+                    <!-- Por si sólo no se puede hacer con él, haría falta -->
+                    <!-- usar JavaScript o PHP para poder coger ese archivo y subir a algún sitio; -->
+                    <!-- Además el <form> debe tener el atributo: enctype="multipart/form-data" -->
+            <label for="archivo">upload archivo</label>
+            <input type="file" id="archivo">
+
+            <p> ----------------- </p>
+            
+            <!-- Input type Range: para seleccionar un rango,  se deben establecer con atributos los -->
+                    <!-- valores maximos y mínimos -->
+            <label for="rango">Seleccionar un Rango</label>
+            <input type="range" id="rango" min="0" max="50" step="10">
+
+            <p> ----------------- </p>
+
+            <!-- Input type Search: -->
+            <!-- No se diferencia mucho del type Text, pero cuando se busca en un móvil el aspecto y tipo si cambia, aparece un teclado alfabético en pantalla -->
+            <label for="busqueda">Buscar</label>
+            <input type="search" id="busqueda">
+
+            <p> ----------------- </p>
+
+            <!-- Input type Tel: -->
+            <!-- No se diferencia mucho del type Text, pero cuando se busca en un móvil el aspecto y tipo si cambia, aparece un teclado númerico en pantalla -->
+
+            <label for="tecladonumerico">Ingrese Número Telefónico</label>
+            <input type="tel" id="tecladonumerico">
+
+            <p> ----------------- </p>
+
+            <!-- Input type List:  Crea un filtro en que poder buscar -->
+            <!-- Luego se debe pone la etiqueta <datalist> para dentro de ésta por los items -->
+            
+            <label for="listado">Elija un navegador:</label>
+            <input list="listado">
+            <datalist id="listado">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Edge">
+                <option value="Safari">
+            </datalist>
+
+        </form>
+
+    </body>
+
+</html>

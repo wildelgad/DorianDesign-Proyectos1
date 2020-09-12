@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+
+        <title> Formularios continuación </title>
+    </head>
+
+    <body>
+        <h1>Formularios ...continuación</h1>
+
+        <form action="#">
+            <!-- etiqueta <Select> : Permite hacer un desplegable con diferenes opciones -->
+                                    <!-- FORMA 1 -->
+            <label for="languajes">Lenguajes Informáticos</label>
+            <select name="" id="languajes">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JS</option>
+                <option value="java">Java</option>
+            </select>
+            <br><br><br>
+                                    <!-- FORMA 2: -->
+                                    <!--  el atributo 'multiple' junto con <optgroup> -->
+            <label for="languajes2">Lenguajes Informáticos</label>
+            <select size="8" multiple name="" id="languajes2">
+                <optgroup label="Lenguaje de Marcado">
+                    <option value="html">HTML</option>
+                    <option value="xml">XML</option>
+                </optgroup>
+                <optgroup label="Lenguajes de Diseño"> 
+                    <option value="css">CSS</option>                    
+                </optgroup>
+                <optgroup label="Lenguajes de Programación">
+                    <option value="js">JS</option>
+                    <option value="java">Java</option>
+                </optgroup>
+            </select>
+
+            <p> ------------------------- </p>
+
+            <!-- etiqueta <textarea> : Es un campo de texto en el cual se puede escribir -->
+            <label for="text">Texto Mensaje</label>
+            <textarea name="" id="text" cols="30" rows="10"></textarea>
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+
+        <title> TABLAS -> ejemplo </title>
+    </head>
+
+    <style>
+        th{
+            background:lightblue;
+        }
+
+        .cabecera{
+            background: red;
+        }
+
+        .quintaColumna{
+            background: yellow;
+        }
+    </style>
+
+    <body>
+        <h1> Mis Tablas </h1>
+        <table border="1px solid blue">  <!-- border dejó de usarse desde HTML 4, por eso está en rojo.  En la actualidad se usa con CSS -->
+            <caption> HORARIO </caption>
+
+            <colgroup>
+                <col span="1">
+                <col class="quintaColumna">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th>HORA: </th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="cabecera">
+                    <td> 9:10 </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>10:10 </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>11:10 </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">12:00 </td>
+                    <td colspan="5"> Descanso </td>                    
+                </tr>
+                <tr>
+                    <td colspan="5"> Charla </td>
+                </tr>
+
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>Total de Horas</td>
+                    <td colspan="5">5 horas 30 minutos</td>
+                </tr>
+            </tfoot>
+            
+        </table>
+    </body>
+    
+</html>
